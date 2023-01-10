@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Configuration app="BACKEND" formatVersion="13" lastSavedWith="Configurator Backend" lastSavedWithVersion="3.0.0" toolsPackage="ModusToolbox 3.0.0" xmlns="http://cypress.com/xsd/cydesignfile_v4">
     <Devices>
-        <Device mpn="XMC4700-F144x2048">
+        <Device mpn="XMC4800-F144x2048">
             <BlockConfig>
                 <Block location="ioss[0].port[15].pin[12]">
                     <Alias value="CYBSP_USER_BTN2"/>
@@ -205,6 +205,12 @@
                 </Block>
                 <Block location="scu[0].clock[0].cpuclk[0]">
                     <Personality template="xmc4_cpuclk" version="1.0">
+                        <Param id="divider" value="1"/>
+                    </Personality>
+                </Block>
+                <Block location="scu[0].clock[0].ecatclk[0]">
+                    <Personality template="xmc4_ecatclk" version="1.0">
+                        <Param id="clock_source" value="XMC_SCU_CLOCK_ECATCLKSRC_SYSPLL"/>
                         <Param id="divider" value="1"/>
                     </Personality>
                 </Block>

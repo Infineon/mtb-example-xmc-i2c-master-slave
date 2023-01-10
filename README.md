@@ -19,8 +19,16 @@ You must make the connection between the I2C master and the I2C slave externally
 
 ## Supported kits (make variable 'TARGET')
 
+- [XMC1100 boot kit](https://www.infineon.com/cms/en/product/evaluation-boards/kit_xmc11_boot_001/) (`KIT_XMC11_BOOT_001`)
+- [XMC1200 boot kit](https://www.infineon.com/cms/en/product/evaluation-boards/kit_xmc12_boot_001/) (`KIT_XMC12_BOOT_001`)
+- [XMC1300 boot kit](https://www.infineon.com/cms/en/product/evaluation-boards/kit_xmc13_boot_001/) (`KIT_XMC13_BOOT_001`)
 - [XMC1400 boot kit](https://www.infineon.com/cms/en/product/evaluation-boards/kit_xmc14_boot_001/) (`KIT_XMC14_BOOT_001`) - Default value of `TARGET`
+- [XMC4200 Platform2GO XTREME kit](https://www.infineon.com/cms/en/product/evaluation-boards/kit_xmc_plt2go_xmc4200/) (`KIT_XMC_PLT2GO_XMC4200`)
+- [XMC4300 relax EtherCAT kit](https://www.infineon.com/cms/en/product/evaluation-boards/kit_xmc43_relax_ecat_v1/) (`KIT_XMC43_RELAX_ECAT_V1`)
+- [XMC4400 Platform2GO XTREME kit](https://www.infineon.com/cms/en/product/evaluation-boards/kit_xmc_plt2go_xmc4400/) (`KIT_XMC_PLT2GO_XMC4400`)
+- [XMC4500 relax kit](https://www.infineon.com/cms/en/product/evaluation-boards/kit_xmc45_relax_v1/) (`KIT_XMC45_RELAX_V1`)
 - [XMC4700 relax kit](https://www.infineon.com/cms/en/product/evaluation-boards/kit_xmc47_relax_v1/) (`KIT_XMC47_RELAX_V1`)
+- [XMC4800 relax EtherCAT kit](https://www.infineon.com/cms/en/product/evaluation-boards/kit_xmc48_relax_ecat_v1/) (`KIT_XMC48_RELAX_ECAT_V1`)
 
 ## Hardware setup
 
@@ -32,9 +40,15 @@ See the kit user guide to ensure that the board is configured correctly. To prep
 
  Board name               | Master SCL | Master SDA | Slave SCL | Slave SDA
  ------------------------ | ---------- | ---------- | --------- | ---------
- KIT_XMC14_BOOT_001       | 1.8        | 2.12       | 0.8       | 2.11
- KIT_XMC47_RELAX_V1       | 6.2        | 3.13       | 5.2       | 5.0
-
+ KIT_XMC11_BOOT_001       | 2.11       | 1.2        | 2.0       | 2.1       |
+ KIT_XMC12_BOOT_001       | 2.11       | 2.10       | 0.8       | 1.0       |
+ KIT_XMC13_BOOT_001       | 1.3        | 1.2        | 2.0       | 1.0       |
+ KIT_XMC14_BOOT_001       | 1.8        | 2.12       | 0.8       | 2.11      |
+ KIT_XMC_PLT2GO_XMC4200   | 3.0        | 2.5        | 0.11      | 2.14      |
+ KIT_XMC43_RELAX_ECAT_V1  | 2.4        | 2.5        | 0.8       | 1.5       |
+ KIT_XMC_PLT2GO_XMC4400   | 3.0        | 2.5        | 0.11      | 2.14      |
+ KIT_XMC45_RELAX_V1       | 0.11       | 0.5        | 5.2       | 5.0       |
+ KIT_XMC48_RELAX_ECAT_V1  | 6.2        | 3.13       | 5.2       | 5.0       |
 
 ## Software setup
 
@@ -184,6 +198,7 @@ Document title: *CE232573* – *XMC&trade; MCU: I2C master and slave*
  1.0.0   | New code example
  1.1.0   | Added support for more kits
  2.0.0   | Updated to support ModusToolbox™ software v3.0; CE will not be backward compatible with previous versions of ModusToolbox™ software
+ 2.1.0   | Added support for more kits
 ------
 
 All other trademarks or registered trademarks referenced herein are the property of their respective owners.
